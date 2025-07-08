@@ -21,7 +21,7 @@
     }
   }
 
-  const restarLikes =() =>{
+  const restartLikes =() =>{
     likes.value = 0;
   }
 </script>
@@ -40,6 +40,7 @@
       </p>
     </div>
     <button @click="likePost" :disabled="likes >= maxLikes">Likes: {{ likes }}</button>
+    <button @click="restartLikes" :disabled="likes >= maxLikes">Likes: {{ likes }}</button>
   </div>
 </template>
 
