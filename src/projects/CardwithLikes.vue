@@ -11,7 +11,7 @@
   })
 
   const likes = ref(props.likesCount);
-  const maxLikes = 10;
+  const maxLikes = 15;
 
   const likePost = () =>{
     if(likes.value < maxLikes){
@@ -21,7 +21,7 @@
     }
   }
 
-  const restarLikes =() =>{
+  const restartLikes =() =>{
     likes.value = 0;
   }
 </script>
@@ -39,12 +39,19 @@
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis dolorum consequatur fugit harum aliquid quia necessitatibus qui! Illum tempora at laboriosam, eos aliquam, molestiae debitis dolorum soluta ratione modi quidem.
       </p>
     </div>
-    <button @click="likePost" :disabled="likes >= 10">Likes: {{ likes }}</button>
+    <button @click="likePost" :disabled="likes >= maxLikes">Likes: {{ likes }}</button>
+    <button @click="restartLikes">RESET LIKES</button>
   </div>
 </template>
 
 
 <style scoped>
+  *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  body{
+    display: flex;
+  }
   .user-card {
     width: 300px;
     border: 1px solid #ccc;
@@ -79,10 +86,11 @@
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 2px;
   }
 
   button[disabled] {
     background-color: #ccc;
     cursor: not-allowed;
   }
-</style>
+</style> 
