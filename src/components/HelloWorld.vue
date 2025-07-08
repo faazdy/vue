@@ -86,6 +86,7 @@
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 2px;
   }
 
   button[disabled] {
