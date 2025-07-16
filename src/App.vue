@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <HelloWorld username="diego" userPic="https://static.vecteezy.com/system/resources/thumbnails/041/880/991/small_2x/ai-generated-pic-artistic-depiction-of-sunflowers-under-a-vast-cloudy-sky-photo.jpg" :likesCount="5" /> // Para pasar datos NO STRING usamos ':'
-  <HelloWorld username="diego" userPic="https://static.vecteezy.com/system/resources/thumbnails/041/880/991/small_2x/ai-generated-pic-artistic-depiction-of-sunflowers-under-a-vast-cloudy-sky-photo.jpg" :likesCount="3" /> // Para pasar datos NO STRING usamos ':'
+  <!--<CardwithImage username="Londra" :likesCount="5" /> -->
+  <HelloWorld />
 </template>
 
 <style scoped> /*SCPED sirve para mantener los estilos nomas para el componente actual*/ 
